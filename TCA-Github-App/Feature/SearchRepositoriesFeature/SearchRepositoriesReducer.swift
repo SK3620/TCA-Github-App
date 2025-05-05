@@ -23,7 +23,9 @@ public struct SearchRepositoriesReducer: Reducer, Sendable {
         // 画面の状態を積み上げる
          var path = StackState<Path.State>()
         
-        public init() {}
+        public init(query: String = "") {
+            self.query = query
+        }
     }
     
     // どんな画面を積み上げるかを定義

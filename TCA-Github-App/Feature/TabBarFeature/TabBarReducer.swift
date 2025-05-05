@@ -25,6 +25,7 @@ public struct TabBarReducer {
         case didSelectTab(Tab)
         case delegate(Delegate)
         
+        // 親（RootReducer）にタブ選択時のActionを委譲するためのAction
         public enum Delegate: Equatable {
             case didSelectTab(Tab)
         }
@@ -34,6 +35,7 @@ public struct TabBarReducer {
         Reduce { state, action in
             switch action {
             case let .didSelectTab(tab):
+                // 親に処理を委譲する
                 return .send(.delegate(.didSelectTab(tab)))
             case .delegate:
                 return .none
