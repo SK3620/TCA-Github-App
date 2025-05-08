@@ -75,8 +75,6 @@ public struct SearchRepositoriesReducer: Reducer, Sendable {
                 return .none
             case .binding:
                 return .none // BindingReducer()で自動で処理されるので特に何もしなくて
-            case .items:
-                return .none
             case .itemAppeared:
                 return .none
             case let .itemTapped(item, liked):
@@ -114,9 +112,15 @@ public struct SearchRepositoriesReducer: Reducer, Sendable {
                 return .none
             case .delegate:
                 return .none
+            case let .items(.element(id: _, action: .delegate(.didBookmark(repository)))):
+                print("\(repository.name) をブックマークしました")
+                return .none
+            case .items:
+                return .none
             }
         }
-        // それぞれの子に対応するロジック（Reducer）を割り当てる
+        // 親に複数の子を埋め込む（それぞれの子に対応する Reducer を適用する）
+        // 大きな List 画面を管理する Reducer と List 内の一つ一つの Row を管理するための Reducer を分ける
         .forEach(\.items, action: \.items) {
             RepositoryItemReducer()
         }

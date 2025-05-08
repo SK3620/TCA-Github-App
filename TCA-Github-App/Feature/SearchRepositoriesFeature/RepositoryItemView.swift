@@ -25,15 +25,35 @@ struct RepositoryItemView: View {
             
             Spacer(minLength: 16)
             
-            Button {
-                 $store.liked.wrappedValue.toggle()
-            } label: {
-                Image(systemName: store.liked ? "heart.fill" : "heart")
-                    .resizable()
-                    .frame(width: 20, height: 20)
-                    .foregroundStyle(Color.pink)
+            VStack {
+                
+                Spacer()
+                
+                Button {
+                    store.liked.toggle()
+                } label: {
+                    Image(systemName: store.liked ? "heart.fill" : "heart")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundStyle(Color.pink)
+                }
+                .buttonStyle(.plain)
+                
+                Spacer()
+                
+                Button {
+                    store.bookmarked.toggle()
+                    store.send(.didBookmark(store.repository))
+                } label: {
+                    Image(systemName: store.bookmarked ? "bookmark.fill" : "bookmark")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundStyle(Color.pink)
+                }
+                .buttonStyle(.plain)
+                
+                Spacer()
             }
-            .buttonStyle(.plain)
         }
     }
 }
