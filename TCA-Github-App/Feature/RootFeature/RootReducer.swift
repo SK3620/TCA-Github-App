@@ -36,8 +36,21 @@ public struct RootReducer: Reducer, Sendable {
         // ・親が処理の一部を子に任せられる
         // ・親で子のActionを受け取れて処理できる
         // ・親が子のStateを操作できる
+        
         Scope(state: \.tabBar, action: \.tabBar) {
             TabBarReducer()
+        }
+        
+        Scope(state: \.homeReducer, action: \.homeTab) {
+            HomeReducer()
+        }
+                
+        Scope(state: \.searchReducer, action: \.searchTab) {
+            SearchRepositoriesReducer()
+        }
+        
+        Scope(state: \.profileReducer, action: \.profileTab) {
+            ProfileReducer()
         }
         
         Reduce { state, action in
