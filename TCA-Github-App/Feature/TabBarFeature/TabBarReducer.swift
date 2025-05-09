@@ -21,6 +21,7 @@ public struct TabBarReducer {
         var selectedTab: Tab = .home
     }
     
+    /*
     public enum Action: Equatable {
         case didSelectTab(Tab)
         case delegate(Delegate)
@@ -30,6 +31,7 @@ public struct TabBarReducer {
             case didSelectTab(Tab)
         }
     }
+     
     
     public var body: some ReducerOf<Self> {
         Reduce { state, action in
@@ -40,6 +42,49 @@ public struct TabBarReducer {
             case .delegate:
                 return .none
             }
+        }
+    }
+     */
+    
+    public var body: some ReducerOf<Self> {
+        Reduce { state, action in
+            switch action {
+            case let .view(viewAction):
+                switch viewAction {
+                case let .didSelectTab(tab):
+                    return .send(.delegate(.didSelectTab(tab)))
+                }
+                
+            case .internal:
+                return .none
+                
+            case .delegate:
+                return .none
+                
+            }
+        }
+    }
+}
+
+extension TabBarReducer {
+    public enum Action: ReducerAction {
+        
+        case view(ViewAction)
+        case `internal`(InternalAction)
+        case delegate(DelegateAction)
+        
+        // View で発生する Action
+        public enum ViewAction {
+            case didSelectTab(Tab)
+        }
+        
+        // Reducer 内部で副作用によって発生する Action
+        public enum InternalAction {}
+        
+        // Parent Reducer に処理を委譲するための Action
+        public enum DelegateAction: Equatable {
+            // 親（RootReducer）にタブ選択時のActionを委譲するためのAction
+            case didSelectTab(Tab)
         }
     }
 }
