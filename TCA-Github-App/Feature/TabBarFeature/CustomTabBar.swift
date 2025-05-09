@@ -18,7 +18,7 @@ public struct CustomTabBar: View {
     public var body: some View {
         HStack {
             Button {
-                store.send(.didSelectTab(.home))
+                store.send(.view(.didSelectTab(.home)))
             } label: {
                 Image(systemName: store.selectedTab == .home ? "house.fill" : "house")
                     .font(.system(size: 24))
@@ -28,7 +28,7 @@ public struct CustomTabBar: View {
             Spacer()
             
             Button {
-                store.send(.didSelectTab(.search))
+                store.send(.view(.didSelectTab(.search)))
             } label: {
                 Image(systemName: store.selectedTab == .search ? "magnifyingglass.circle.fill" : "magnifyingglass.circle")
                     .font(.system(size: 24))
@@ -38,7 +38,7 @@ public struct CustomTabBar: View {
             Spacer()
             
             Button {
-                store.send(.didSelectTab(.profile))
+                store.send(.view(.didSelectTab(.profile)))
             } label: {
                 Image(systemName: store.selectedTab == .profile ? "person.crop.circle.fill" : "person.crop.circle")
                     .font(.system(size: 24))
