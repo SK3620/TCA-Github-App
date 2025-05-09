@@ -19,21 +19,44 @@ public struct RootView: View {
     public var body: some View {
         GeometryReader { geometryReader in
             ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
-                // ユーザー入力や操作を、Actionに変えてReducerに伝える仕組み
-                TabView(selection: $store.tabBar.selectedTab.sending(\.tabBar.didSelectTab)) {
-                    
-                    HomeView(store: store.scope(state: \.homeReducer, action: \.homeTab))
-                        .tag(Tab.home)
-                        .toolbar(.hidden, for: .tabBar)
-                                        
-                    SearchRepositoriesView(store: store.scope(state: \RootReducer.State.searchReducer, action: \.searchTab))
-                        .tag(Tab.search)
-                        .toolbar(.hidden, for: .tabBar)
-                    
-                    ProfileView(store: store.scope(state: \.profileReducer, action: \.profileTab))
-                        .tag(Tab.profile)
-                        .toolbar(.hidden, for: .tabBar)
-                }
+                
+                TabView(selection: Binding(
+                    get: {
+                        store.tabBar.selectedTab
+                    },
+                    set: { tab in
+                        // store.send(.tabBar(.view(.didSelectTab(tab))))
+                    })) {
+                        HomeView(store: store.scope(state: \.homeReducer, action: \.homeTab))
+                            .tag(Tab.home)
+                            .toolbar(.hidden, for: .tabBar)
+                        
+                        SearchRepositoriesView(store: store.scope(state: \RootReducer.State.searchReducer, action: \.searchTab))
+                            .tag(Tab.search)
+                            .toolbar(.hidden, for: .tabBar)
+                        
+                        ProfileView(store: store.scope(state: \.profileReducer, action: \.profileTab))
+                            .tag(Tab.profile)
+                            .toolbar(.hidden, for: .tabBar)
+                    }
+                
+                /*
+                 // ユーザー入力や操作を、Actionに変えてReducerに伝える仕組み
+                 TabView(selection: $store.tabBar.selectedTab.sending(\.tabBar.view(.didSelectTab))) {
+                 
+                 HomeView(store: store.scope(state: \.homeReducer, action: \.homeTab))
+                 .tag(Tab.home)
+                 .toolbar(.hidden, for: .tabBar)
+                 
+                 SearchRepositoriesView(store: store.scope(state: \RootReducer.State.searchReducer, action: \.searchTab))
+                 .tag(Tab.search)
+                 .toolbar(.hidden, for: .tabBar)
+                 
+                 ProfileView(store: store.scope(state: \.profileReducer, action: \.profileTab))
+                 .tag(Tab.profile)
+                 .toolbar(.hidden, for: .tabBar)
+                 }
+                 */
                 
                 // store.scopeでCustomTabBarで必要となる、親が持つtabBarのStateとActionだけを
                 // 取り出して、StoreOf<TabBarReducer>を返却し、それを渡す
