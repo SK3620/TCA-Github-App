@@ -16,6 +16,14 @@ public struct HomeView: View {
     }
     
     public var body: some View {
-        Text("Home")
+        ZStack {
+            Color.blue.opacity(0.1)
+              .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Text("Home")
+                Text("（CustomTabBarにTabViewの切り替え練習）")
+            }
+        }
     }
 }

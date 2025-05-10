@@ -16,6 +16,14 @@ public struct ProfileView: View {
     }
     
     public var body: some View {
-        Text("Profile")
+        ZStack {
+            Color.orange.opacity(0.1)
+              .edgesIgnoringSafeArea(.all)
+
+            VStack {
+                Text("Profile")
+                Text("（CustomTabBarにTabViewの切り替え練習）")
+            }
+        }
     }
 }
