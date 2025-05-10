@@ -12,19 +12,26 @@ public struct RootView: View {
     @Bindable var store: StoreOf<RootReducer>
     
     public init(store: StoreOf<RootReducer>) {
-        UITabBar.appearance().isHidden = true
+        UITabBar.appearance().isHidden = true // CustomTabBar を自前で用意
         self.store = store
     }
     
     public var body: some View {
         GeometryReader { geometryReader in
             ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
-                
+                                
                 TabView(selection: Binding(
                     get: {
                         store.tabBar.selectedTab
                     },
                     set: { tab in
+                        /*
+                         以下の理由からそもそも setter は呼ばれない
+                         ・標準のタブバーを非表示し、自前で用意している
+                         ・CustomTabBar でタブ切り替えアクション送信
+                         ・TabView は getter で読み取るだけ
+                         */
+                        
                         // store.send(.tabBar(.view(.didSelectTab(tab))))
                     })) {
                         HomeView(store: store.scope(state: \.homeReducer, action: \.homeTab))

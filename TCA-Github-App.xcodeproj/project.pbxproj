@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		830AAFBD2DC89FE000863DAF /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830AAFA02DC89FE000863DAF /* App.swift */; };
-		83C845FB2DC89A1E000B19C8 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 83C845FA2DC89A1E000B19C8 /* ComposableArchitecture */; };
-		83C845FE2DC89ABB000B19C8 /* APIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 83C845FD2DC89ABB000B19C8 /* APIKit */; };
+		836190572DCC642B0047C9EF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 836190562DCC642B0047C9EF /* ComposableArchitecture */; };
+		8361905A2DCC645F0047C9EF /* APIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 836190592DCC645F0047C9EF /* APIKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		8378EB8E2DCEDC4B0005472C /* PropertyWrappersSample */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PropertyWrappersSample;
+			sourceTree = "<group>";
+		};
+		838CF4AF2DC8B0E9006A96BE /* ChildActionDelegateWIthScopeSample */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ChildActionDelegateWIthScopeSample;
+			sourceTree = "<group>";
+		};
 		83C845212DC897AC000B19C8 /* TCA-Github-App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "TCA-Github-App";
@@ -59,8 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83C845FE2DC89ABB000B19C8 /* APIKit in Frameworks */,
-				83C845FB2DC89A1E000B19C8 /* ComposableArchitecture in Frameworks */,
+				8361905A2DCC645F0047C9EF /* APIKit in Frameworks */,
+				836190572DCC642B0047C9EF /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +94,8 @@
 		83C845162DC897AC000B19C8 = {
 			isa = PBXGroup;
 			children = (
+				8378EB8E2DCEDC4B0005472C /* PropertyWrappersSample */,
+				838CF4AF2DC8B0E9006A96BE /* ChildActionDelegateWIthScopeSample */,
 				83C845212DC897AC000B19C8 /* TCA-Github-App */,
 				83C845322DC897AD000B19C8 /* TCA-Github-AppTests */,
 				83C8453C2DC897AD000B19C8 /* TCA-Github-AppUITests */,
@@ -118,12 +130,14 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				8378EB8E2DCEDC4B0005472C /* PropertyWrappersSample */,
+				838CF4AF2DC8B0E9006A96BE /* ChildActionDelegateWIthScopeSample */,
 				83C845212DC897AC000B19C8 /* TCA-Github-App */,
 			);
 			name = "TCA-Github-App";
 			packageProductDependencies = (
-				83C845FA2DC89A1E000B19C8 /* ComposableArchitecture */,
-				83C845FD2DC89ABB000B19C8 /* APIKit */,
+				836190562DCC642B0047C9EF /* ComposableArchitecture */,
+				836190592DCC645F0047C9EF /* APIKit */,
 			);
 			productName = "TCA-Github-App";
 			productReference = 83C8451F2DC897AC000B19C8 /* TCA-Github-App.app */;
@@ -208,8 +222,8 @@
 			mainGroup = 83C845162DC897AC000B19C8;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				83C845F92DC89A1E000B19C8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				83C845FC2DC89ABB000B19C8 /* XCRemoteSwiftPackageReference "APIKit" */,
+				836190552DCC642B0047C9EF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				836190582DCC645F0047C9EF /* XCRemoteSwiftPackageReference "APIKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 83C845202DC897AC000B19C8 /* Products */;
@@ -422,6 +436,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +466,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,17 +594,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		83C845F92DC89A1E000B19C8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		836190552DCC642B0047C9EF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.18.0;
+				kind = exactVersion;
+				version = 1.18.0;
 			};
 		};
-		83C845FC2DC89ABB000B19C8 /* XCRemoteSwiftPackageReference "APIKit" */ = {
+		836190582DCC645F0047C9EF /* XCRemoteSwiftPackageReference "APIKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ishkawa/APIKit";
+			repositoryURL = "https://github.com/ishkawa/APIKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.4.0;
@@ -597,14 +613,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		83C845FA2DC89A1E000B19C8 /* ComposableArchitecture */ = {
+		836190562DCC642B0047C9EF /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 83C845F92DC89A1E000B19C8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			package = 836190552DCC642B0047C9EF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
 		};
-		83C845FD2DC89ABB000B19C8 /* APIKit */ = {
+		836190592DCC645F0047C9EF /* APIKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 83C845FC2DC89ABB000B19C8 /* XCRemoteSwiftPackageReference "APIKit" */;
+			package = 836190582DCC645F0047C9EF /* XCRemoteSwiftPackageReference "APIKit" */;
 			productName = APIKit;
 		};
 /* End XCSwiftPackageProductDependency section */
