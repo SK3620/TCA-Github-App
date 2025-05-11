@@ -2,6 +2,20 @@
 
 iOSアーキテクチャ「TCA」の学習を目的としたサンプルアプリ
 
+**※ 復習し、理解度が深められるよう、学習用のコメントアウトを多く記述しています。**
+
+## 主な実装済み機能
+- CustomTab によるタブ画面の切り替え
+- API通信による、GitHubレポジトリの検索結果を一覧に表示
+- Repository お気に入りボタン
+- お気に入りのみ一覧に表示
+- Repository 一覧画面から Repository 詳細画面への遷移　など...
+
+## 今やっていること/今後やること
+**[TCA GitHub Examples CaseStudies](https://github.com/pointfreeco/swift-composable-architecture/tree/main/Examples/CaseStudies/SwiftUICaseStudies)** にて、TCA の様々な利用シーンごとの実装例が豊富に用意されているため、それらを参考に、現サンプルアプリの機能の改修・追加等を行い、TCA のキャッチアップを行う。
+
+その後は、TCA におけるテストコードを学習予定。
+
 ## 📚 参考リンク
 
 - [TCA公式ドキュメント](https://pointfreeco.github.io/swift-composable-architecture/main/documentation/composablearchitecture)
