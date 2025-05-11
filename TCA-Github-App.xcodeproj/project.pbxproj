@@ -8,6 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		830AAFBD2DC89FE000863DAF /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830AAFA02DC89FE000863DAF /* App.swift */; };
+		8322EB652DD0AFAD007475FA /* 01-GettingStarted-Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB3E2DD0AFAD007475FA /* 01-GettingStarted-Animations.swift */; };
+		8322EB662DD0AFAD007475FA /* 01-GettingStarted-OptionalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB442DD0AFAD007475FA /* 01-GettingStarted-OptionalState.swift */; };
+		8322EB672DD0AFAD007475FA /* 04-Navigation-Sheet-PresentAndLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB532DD0AFAD007475FA /* 04-Navigation-Sheet-PresentAndLoad.swift */; };
+		8322EB682DD0AFAD007475FA /* 03-Effects-WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB4E2DD0AFAD007475FA /* 03-Effects-WebSocket.swift */; };
+		8322EB692DD0AFAD007475FA /* UIViewRepresented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB612DD0AFAD007475FA /* UIViewRepresented.swift */; };
+		8322EB6A2DD0AFAD007475FA /* 03-Effects-LongLiving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB4B2DD0AFAD007475FA /* 03-Effects-LongLiving.swift */; };
+		8322EB6B2DD0AFAD007475FA /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB622DD0AFAD007475FA /* AboutView.swift */; };
+		8322EB6C2DD0AFAD007475FA /* 04-Navigation-Lists-NavigateAndLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB4F2DD0AFAD007475FA /* 04-Navigation-Lists-NavigateAndLoad.swift */; };
+		8322EB6D2DD0AFAD007475FA /* 01-GettingStarted-AlertsAndConfirmationDialogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB3D2DD0AFAD007475FA /* 01-GettingStarted-AlertsAndConfirmationDialogs.swift */; };
+		8322EB6E2DD0AFAD007475FA /* DownloadComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB5B2DD0AFAD007475FA /* DownloadComponent.swift */; };
+		8322EB6F2DD0AFAD007475FA /* ReusableComponents-Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB5C2DD0AFAD007475FA /* ReusableComponents-Download.swift */; };
+		8322EB702DD0AFAD007475FA /* 03-Effects-Timers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB4D2DD0AFAD007475FA /* 03-Effects-Timers.swift */; };
+		8322EB712DD0AFAD007475FA /* 01-GettingStarted-FocusState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB432DD0AFAD007475FA /* 01-GettingStarted-FocusState.swift */; };
+		8322EB722DD0AFAD007475FA /* 02-SharedState-Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB472DD0AFAD007475FA /* 02-SharedState-Onboarding.swift */; };
+		8322EB732DD0AFAD007475FA /* 04-Navigation-Sheet-LoadThenPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB522DD0AFAD007475FA /* 04-Navigation-Sheet-LoadThenPresent.swift */; };
+		8322EB742DD0AFAD007475FA /* 04-NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB542DD0AFAD007475FA /* 04-NavigationStack.swift */; };
+		8322EB752DD0AFAD007475FA /* 02-SharedState-FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB452DD0AFAD007475FA /* 02-SharedState-FileStorage.swift */; };
+		8322EB762DD0AFAD007475FA /* 01-GettingStarted-Bindings-Forms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB402DD0AFAD007475FA /* 01-GettingStarted-Bindings-Forms.swift */; };
+		8322EB772DD0AFAD007475FA /* ResignFirstResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB5F2DD0AFAD007475FA /* ResignFirstResponder.swift */; };
+		8322EB782DD0AFAD007475FA /* FactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB582DD0AFAD007475FA /* FactClient.swift */; };
+		8322EB792DD0AFAD007475FA /* 03-Effects-Cancellation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB4A2DD0AFAD007475FA /* 03-Effects-Cancellation.swift */; };
+		8322EB7A2DD0AFAD007475FA /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB5E2DD0AFAD007475FA /* CircularProgressView.swift */; };
+		8322EB7B2DD0AFAD007475FA /* 03-Effects-Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB492DD0AFAD007475FA /* 03-Effects-Basics.swift */; };
+		8322EB7C2DD0AFAD007475FA /* 04-Navigation-Multiple-Destinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB502DD0AFAD007475FA /* 04-Navigation-Multiple-Destinations.swift */; };
+		8322EB7D2DD0AFAD007475FA /* 04-Navigation-NavigateAndLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB512DD0AFAD007475FA /* 04-Navigation-NavigateAndLoad.swift */; };
+		8322EB7E2DD0AFAD007475FA /* 02-SharedState-InMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB462DD0AFAD007475FA /* 02-SharedState-InMemory.swift */; };
+		8322EB7F2DD0AFAD007475FA /* TemplateText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB602DD0AFAD007475FA /* TemplateText.swift */; };
+		8322EB802DD0AFAD007475FA /* DownloadClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB5A2DD0AFAD007475FA /* DownloadClient.swift */; };
+		8322EB812DD0AFAD007475FA /* 01-GettingStarted-Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB422DD0AFAD007475FA /* 01-GettingStarted-Counter.swift */; };
+		8322EB822DD0AFAD007475FA /* 01-GettingStarted-Bindings-Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB3F2DD0AFAD007475FA /* 01-GettingStarted-Bindings-Basics.swift */; };
+		8322EB832DD0AFAD007475FA /* 00-RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB3C2DD0AFAD007475FA /* 00-RootView.swift */; };
+		8322EB842DD0AFAD007475FA /* 02-SharedState-UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB482DD0AFAD007475FA /* 02-SharedState-UserDefaults.swift */; };
+		8322EB852DD0AFAD007475FA /* 05-HigherOrderReducers-ReusableFavoriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB562DD0AFAD007475FA /* 05-HigherOrderReducers-ReusableFavoriting.swift */; };
+		8322EB862DD0AFAD007475FA /* 01-GettingStarted-Composition-TwoCounters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB412DD0AFAD007475FA /* 01-GettingStarted-Composition-TwoCounters.swift */; };
+		8322EB882DD0AFAD007475FA /* 03-Effects-Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB4C2DD0AFAD007475FA /* 03-Effects-Refreshable.swift */; };
+		8322EB892DD0AFAD007475FA /* 05-HigherOrderReducers-Recursion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322EB552DD0AFAD007475FA /* 05-HigherOrderReducers-Recursion.swift */; };
+		8322EB8A2DD0AFAD007475FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8322EB592DD0AFAD007475FA /* Assets.xcassets */; };
 		836190572DCC642B0047C9EF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 836190562DCC642B0047C9EF /* ComposableArchitecture */; };
 		8361905A2DCC645F0047C9EF /* APIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 836190592DCC645F0047C9EF /* APIKit */; };
 /* End PBXBuildFile section */
@@ -31,6 +68,43 @@
 
 /* Begin PBXFileReference section */
 		830AAFA02DC89FE000863DAF /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		8322EB3C2DD0AFAD007475FA /* 00-RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "00-RootView.swift"; sourceTree = "<group>"; };
+		8322EB3D2DD0AFAD007475FA /* 01-GettingStarted-AlertsAndConfirmationDialogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "01-GettingStarted-AlertsAndConfirmationDialogs.swift"; sourceTree = "<group>"; };
+		8322EB3E2DD0AFAD007475FA /* 01-GettingStarted-Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "01-GettingStarted-Animations.swift"; sourceTree = "<group>"; };
+		8322EB3F2DD0AFAD007475FA /* 01-GettingStarted-Bindings-Basics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "01-GettingStarted-Bindings-Basics.swift"; sourceTree = "<group>"; };
+		8322EB402DD0AFAD007475FA /* 01-GettingStarted-Bindings-Forms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "01-GettingStarted-Bindings-Forms.swift"; sourceTree = "<group>"; };
+		8322EB412DD0AFAD007475FA /* 01-GettingStarted-Composition-TwoCounters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "01-GettingStarted-Composition-TwoCounters.swift"; sourceTree = "<group>"; };
+		8322EB422DD0AFAD007475FA /* 01-GettingStarted-Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "01-GettingStarted-Counter.swift"; sourceTree = "<group>"; };
+		8322EB432DD0AFAD007475FA /* 01-GettingStarted-FocusState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "01-GettingStarted-FocusState.swift"; sourceTree = "<group>"; };
+		8322EB442DD0AFAD007475FA /* 01-GettingStarted-OptionalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "01-GettingStarted-OptionalState.swift"; sourceTree = "<group>"; };
+		8322EB452DD0AFAD007475FA /* 02-SharedState-FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "02-SharedState-FileStorage.swift"; sourceTree = "<group>"; };
+		8322EB462DD0AFAD007475FA /* 02-SharedState-InMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "02-SharedState-InMemory.swift"; sourceTree = "<group>"; };
+		8322EB472DD0AFAD007475FA /* 02-SharedState-Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "02-SharedState-Onboarding.swift"; sourceTree = "<group>"; };
+		8322EB482DD0AFAD007475FA /* 02-SharedState-UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "02-SharedState-UserDefaults.swift"; sourceTree = "<group>"; };
+		8322EB492DD0AFAD007475FA /* 03-Effects-Basics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "03-Effects-Basics.swift"; sourceTree = "<group>"; };
+		8322EB4A2DD0AFAD007475FA /* 03-Effects-Cancellation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "03-Effects-Cancellation.swift"; sourceTree = "<group>"; };
+		8322EB4B2DD0AFAD007475FA /* 03-Effects-LongLiving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "03-Effects-LongLiving.swift"; sourceTree = "<group>"; };
+		8322EB4C2DD0AFAD007475FA /* 03-Effects-Refreshable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "03-Effects-Refreshable.swift"; sourceTree = "<group>"; };
+		8322EB4D2DD0AFAD007475FA /* 03-Effects-Timers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "03-Effects-Timers.swift"; sourceTree = "<group>"; };
+		8322EB4E2DD0AFAD007475FA /* 03-Effects-WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "03-Effects-WebSocket.swift"; sourceTree = "<group>"; };
+		8322EB4F2DD0AFAD007475FA /* 04-Navigation-Lists-NavigateAndLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "04-Navigation-Lists-NavigateAndLoad.swift"; sourceTree = "<group>"; };
+		8322EB502DD0AFAD007475FA /* 04-Navigation-Multiple-Destinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "04-Navigation-Multiple-Destinations.swift"; sourceTree = "<group>"; };
+		8322EB512DD0AFAD007475FA /* 04-Navigation-NavigateAndLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "04-Navigation-NavigateAndLoad.swift"; sourceTree = "<group>"; };
+		8322EB522DD0AFAD007475FA /* 04-Navigation-Sheet-LoadThenPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "04-Navigation-Sheet-LoadThenPresent.swift"; sourceTree = "<group>"; };
+		8322EB532DD0AFAD007475FA /* 04-Navigation-Sheet-PresentAndLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "04-Navigation-Sheet-PresentAndLoad.swift"; sourceTree = "<group>"; };
+		8322EB542DD0AFAD007475FA /* 04-NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "04-NavigationStack.swift"; sourceTree = "<group>"; };
+		8322EB552DD0AFAD007475FA /* 05-HigherOrderReducers-Recursion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "05-HigherOrderReducers-Recursion.swift"; sourceTree = "<group>"; };
+		8322EB562DD0AFAD007475FA /* 05-HigherOrderReducers-ReusableFavoriting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "05-HigherOrderReducers-ReusableFavoriting.swift"; sourceTree = "<group>"; };
+		8322EB582DD0AFAD007475FA /* FactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactClient.swift; sourceTree = "<group>"; };
+		8322EB592DD0AFAD007475FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8322EB5A2DD0AFAD007475FA /* DownloadClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadClient.swift; sourceTree = "<group>"; };
+		8322EB5B2DD0AFAD007475FA /* DownloadComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadComponent.swift; sourceTree = "<group>"; };
+		8322EB5C2DD0AFAD007475FA /* ReusableComponents-Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReusableComponents-Download.swift"; sourceTree = "<group>"; };
+		8322EB5E2DD0AFAD007475FA /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		8322EB5F2DD0AFAD007475FA /* ResignFirstResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResignFirstResponder.swift; sourceTree = "<group>"; };
+		8322EB602DD0AFAD007475FA /* TemplateText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateText.swift; sourceTree = "<group>"; };
+		8322EB612DD0AFAD007475FA /* UIViewRepresented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRepresented.swift; sourceTree = "<group>"; };
+		8322EB622DD0AFAD007475FA /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		83C8451F2DC897AC000B19C8 /* TCA-Github-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA-Github-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C8452F2DC897AD000B19C8 /* TCA-Github-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TCA-Github-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C845392DC897AD000B19C8 /* TCA-Github-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TCA-Github-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,9 +165,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8322EB5D2DD0AFAD007475FA /* 05-HigherOrderReducers-ResuableOfflineDownloads */ = {
+			isa = PBXGroup;
+			children = (
+				8322EB5A2DD0AFAD007475FA /* DownloadClient.swift */,
+				8322EB5B2DD0AFAD007475FA /* DownloadComponent.swift */,
+				8322EB5C2DD0AFAD007475FA /* ReusableComponents-Download.swift */,
+			);
+			path = "05-HigherOrderReducers-ResuableOfflineDownloads";
+			sourceTree = "<group>";
+		};
+		8322EB632DD0AFAD007475FA /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				8322EB5E2DD0AFAD007475FA /* CircularProgressView.swift */,
+				8322EB5F2DD0AFAD007475FA /* ResignFirstResponder.swift */,
+				8322EB602DD0AFAD007475FA /* TemplateText.swift */,
+				8322EB612DD0AFAD007475FA /* UIViewRepresented.swift */,
+				8322EB622DD0AFAD007475FA /* AboutView.swift */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		8322EB642DD0AFAD007475FA /* SwiftUICaseStudies */ = {
+			isa = PBXGroup;
+			children = (
+				8322EB3C2DD0AFAD007475FA /* 00-RootView.swift */,
+				8322EB3D2DD0AFAD007475FA /* 01-GettingStarted-AlertsAndConfirmationDialogs.swift */,
+				8322EB3E2DD0AFAD007475FA /* 01-GettingStarted-Animations.swift */,
+				8322EB3F2DD0AFAD007475FA /* 01-GettingStarted-Bindings-Basics.swift */,
+				8322EB402DD0AFAD007475FA /* 01-GettingStarted-Bindings-Forms.swift */,
+				8322EB412DD0AFAD007475FA /* 01-GettingStarted-Composition-TwoCounters.swift */,
+				8322EB422DD0AFAD007475FA /* 01-GettingStarted-Counter.swift */,
+				8322EB432DD0AFAD007475FA /* 01-GettingStarted-FocusState.swift */,
+				8322EB442DD0AFAD007475FA /* 01-GettingStarted-OptionalState.swift */,
+				8322EB452DD0AFAD007475FA /* 02-SharedState-FileStorage.swift */,
+				8322EB462DD0AFAD007475FA /* 02-SharedState-InMemory.swift */,
+				8322EB472DD0AFAD007475FA /* 02-SharedState-Onboarding.swift */,
+				8322EB482DD0AFAD007475FA /* 02-SharedState-UserDefaults.swift */,
+				8322EB492DD0AFAD007475FA /* 03-Effects-Basics.swift */,
+				8322EB4A2DD0AFAD007475FA /* 03-Effects-Cancellation.swift */,
+				8322EB4B2DD0AFAD007475FA /* 03-Effects-LongLiving.swift */,
+				8322EB4C2DD0AFAD007475FA /* 03-Effects-Refreshable.swift */,
+				8322EB4D2DD0AFAD007475FA /* 03-Effects-Timers.swift */,
+				8322EB4E2DD0AFAD007475FA /* 03-Effects-WebSocket.swift */,
+				8322EB4F2DD0AFAD007475FA /* 04-Navigation-Lists-NavigateAndLoad.swift */,
+				8322EB502DD0AFAD007475FA /* 04-Navigation-Multiple-Destinations.swift */,
+				8322EB512DD0AFAD007475FA /* 04-Navigation-NavigateAndLoad.swift */,
+				8322EB522DD0AFAD007475FA /* 04-Navigation-Sheet-LoadThenPresent.swift */,
+				8322EB532DD0AFAD007475FA /* 04-Navigation-Sheet-PresentAndLoad.swift */,
+				8322EB542DD0AFAD007475FA /* 04-NavigationStack.swift */,
+				8322EB552DD0AFAD007475FA /* 05-HigherOrderReducers-Recursion.swift */,
+				8322EB562DD0AFAD007475FA /* 05-HigherOrderReducers-ReusableFavoriting.swift */,
+				8322EB582DD0AFAD007475FA /* FactClient.swift */,
+				8322EB592DD0AFAD007475FA /* Assets.xcassets */,
+				8322EB5D2DD0AFAD007475FA /* 05-HigherOrderReducers-ResuableOfflineDownloads */,
+				8322EB632DD0AFAD007475FA /* Internal */,
+			);
+			path = SwiftUICaseStudies;
+			sourceTree = "<group>";
+		};
 		83C845162DC897AC000B19C8 = {
 			isa = PBXGroup;
 			children = (
+				8322EB642DD0AFAD007475FA /* SwiftUICaseStudies */,
 				8378EB8E2DCEDC4B0005472C /* PropertyWrappersSample */,
 				838CF4AF2DC8B0E9006A96BE /* ChildActionDelegateWIthScopeSample */,
 				83C845212DC897AC000B19C8 /* TCA-Github-App */,
@@ -242,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8322EB8A2DD0AFAD007475FA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +402,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8322EB652DD0AFAD007475FA /* 01-GettingStarted-Animations.swift in Sources */,
+				8322EB662DD0AFAD007475FA /* 01-GettingStarted-OptionalState.swift in Sources */,
+				8322EB672DD0AFAD007475FA /* 04-Navigation-Sheet-PresentAndLoad.swift in Sources */,
+				8322EB682DD0AFAD007475FA /* 03-Effects-WebSocket.swift in Sources */,
+				8322EB692DD0AFAD007475FA /* UIViewRepresented.swift in Sources */,
+				8322EB6A2DD0AFAD007475FA /* 03-Effects-LongLiving.swift in Sources */,
+				8322EB6B2DD0AFAD007475FA /* AboutView.swift in Sources */,
+				8322EB6C2DD0AFAD007475FA /* 04-Navigation-Lists-NavigateAndLoad.swift in Sources */,
+				8322EB6D2DD0AFAD007475FA /* 01-GettingStarted-AlertsAndConfirmationDialogs.swift in Sources */,
+				8322EB6E2DD0AFAD007475FA /* DownloadComponent.swift in Sources */,
+				8322EB6F2DD0AFAD007475FA /* ReusableComponents-Download.swift in Sources */,
+				8322EB702DD0AFAD007475FA /* 03-Effects-Timers.swift in Sources */,
+				8322EB712DD0AFAD007475FA /* 01-GettingStarted-FocusState.swift in Sources */,
+				8322EB722DD0AFAD007475FA /* 02-SharedState-Onboarding.swift in Sources */,
+				8322EB732DD0AFAD007475FA /* 04-Navigation-Sheet-LoadThenPresent.swift in Sources */,
+				8322EB742DD0AFAD007475FA /* 04-NavigationStack.swift in Sources */,
+				8322EB752DD0AFAD007475FA /* 02-SharedState-FileStorage.swift in Sources */,
+				8322EB762DD0AFAD007475FA /* 01-GettingStarted-Bindings-Forms.swift in Sources */,
+				8322EB772DD0AFAD007475FA /* ResignFirstResponder.swift in Sources */,
+				8322EB782DD0AFAD007475FA /* FactClient.swift in Sources */,
+				8322EB792DD0AFAD007475FA /* 03-Effects-Cancellation.swift in Sources */,
+				8322EB7A2DD0AFAD007475FA /* CircularProgressView.swift in Sources */,
+				8322EB7B2DD0AFAD007475FA /* 03-Effects-Basics.swift in Sources */,
+				8322EB7C2DD0AFAD007475FA /* 04-Navigation-Multiple-Destinations.swift in Sources */,
+				8322EB7D2DD0AFAD007475FA /* 04-Navigation-NavigateAndLoad.swift in Sources */,
+				8322EB7E2DD0AFAD007475FA /* 02-SharedState-InMemory.swift in Sources */,
+				8322EB7F2DD0AFAD007475FA /* TemplateText.swift in Sources */,
+				8322EB802DD0AFAD007475FA /* DownloadClient.swift in Sources */,
+				8322EB812DD0AFAD007475FA /* 01-GettingStarted-Counter.swift in Sources */,
+				8322EB822DD0AFAD007475FA /* 01-GettingStarted-Bindings-Basics.swift in Sources */,
+				8322EB832DD0AFAD007475FA /* 00-RootView.swift in Sources */,
+				8322EB842DD0AFAD007475FA /* 02-SharedState-UserDefaults.swift in Sources */,
+				8322EB852DD0AFAD007475FA /* 05-HigherOrderReducers-ReusableFavoriting.swift in Sources */,
+				8322EB862DD0AFAD007475FA /* 01-GettingStarted-Composition-TwoCounters.swift in Sources */,
+				8322EB882DD0AFAD007475FA /* 03-Effects-Refreshable.swift in Sources */,
+				8322EB892DD0AFAD007475FA /* 05-HigherOrderReducers-Recursion.swift in Sources */,
 				830AAFBD2DC89FE000863DAF /* App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

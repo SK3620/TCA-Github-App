@@ -1,10 +1,10 @@
 {
-  "originHash" : "a4280daff008b39530c4fa05339ae17ec7bcb225f845cb17a53e316387c3050a",
+  "originHash" : "12683e7a764495bea61fe623943dafafc848915cf4340dee446c2311bcbaef8e",
   "pins" : [
     {
       "identity" : "apikit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ishkawa/APIKit",
+      "location" : "https://github.com/ishkawa/APIKit.git",
       "state" : {
         "revision" : "b839e53b870104798035b279d2a6168b0a2227b1",
         "version" : "5.4.0"
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-composable-architecture",
       "state" : {
-        "revision" : "b1d27a82b498b8e697acabd8cc01b585d26aab19",
-        "version" : "1.19.1"
+        "revision" : "76c4411e02cc7768a3f27ca058bd2143c342e5b2",
+        "version" : "1.18.0"
       }
     },
     {
@@ -123,8 +123,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swiftlang/swift-syntax",
       "state" : {
-        "revision" : "f99ae8aa18f0cf0d53481901f88a0991dc3bd4a2",
-        "version" : "601.0.1"
+        "revision" : "0687f71944021d616d34d922343dcef086855920",
+        "version" : "600.0.1"
       }
     },
     {
