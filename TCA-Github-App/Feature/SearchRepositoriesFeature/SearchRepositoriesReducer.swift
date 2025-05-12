@@ -69,6 +69,7 @@ public struct SearchRepositoriesReducer: Reducer, Sendable {
             }
         
         Reduce { state, action in
+            print(action)
             switch action {
             case .binding(\State.query): // KeyPathでパターンマッチングも可能（※「case .binding」よりも先に書く）.onChangeでも良い
                 print("現在の入力値は：\(state.query)")
@@ -91,13 +92,21 @@ public struct SearchRepositoriesReducer: Reducer, Sendable {
                     // let result: Result<SearchReposResponse, any Error>
                     await send(.searchReposResponse(result))
                 }
-            case let .path(.element(id: id, action: .repositoryDetail(.binding(_)))):
-                // case let .path(.element(id: id, action: .binding(\.$liked))): コンパイルエラー
+            case let .path(.element(id: _, action: .repositoryDetail(.binding(bindingAction)))):
+                print("Action内容: \(action) \n\n BindingAction内容: \(bindingAction)")
                 /*
-                public enum StackAction<State, Action>: CasePathable {
-                    indirect case element(id: StackElementID, action: Action)
-                }
+                 
+                 public enum StackAction<State, Action>: CasePathable {
+                     indirect case element(id: StackElementID, action: Action)
+                 }
+
+                 RepositoryDetail で liked が更新された場合...
+                 「path ルートの id: 0 の要素に対して、repositoryDetail の liked プロパティを true に更新するバインディングアクションが送られてきた」⬇︎
+                 action内容: path(.element(id: 0, action: .repositoryDetail(.binding(\.liked, true))))
+                 BindingAction内容: BindingAction<State>(keyPath: \State.liked, set: (Function), value: true, valueIsEqualTo: (Function))
                  */
+                return .none
+            case let .path(.element(id: id, action: .repositoryDetail(.binding(\.liked)))): // keyPath でパターンマッチング
                 guard let repositoryDetail = state.path[id: id]?.repositoryDetail else { return .none }
                 state.items[id: repositoryDetail.id]?.liked = repositoryDetail.liked
                 return .none
@@ -120,7 +129,7 @@ public struct SearchRepositoriesReducer: Reducer, Sendable {
             }
         }
         // 親に複数の子を埋め込む（それぞれの子に対応する Reducer を適用する）
-        // 大きな List 画面を管理する Reducer と List 内の一つ一つの Row を管理するための Reducer を分ける
+        // 大きな List 画面を管理する Reducer と List 内の一つ一つの Row を管理するための Reducer を分けたい時に使用する
         .forEach(\.items, action: \.items) {
             RepositoryItemReducer()
         }
