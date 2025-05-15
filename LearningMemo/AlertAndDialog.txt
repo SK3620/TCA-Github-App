@@ -1,0 +1,70 @@
+//
+//  AlertAndDialog.swift
+//  TCA-Github-App
+//
+//  Created by 鈴木 健太 on 2025/05/15.
+//
+
+🐒「@Presents」って何？
+📦 問題から入ろう！
+SwiftUIでは「アラートを表示したい」と思ったら、こんなことをしないといけない：
+
+@State var isPresented = false
+.alert(isPresented: $isPresented) {
+  Alert(title: Text("アラート！"))
+}
+でも、TCA（The Composable Architecture）では状態もアクションも 全部一元管理するのがルール。
+
+そこで登場するのが…
+
+🧙‍♂️ @Presents の魔法
+@Presents var alert: AlertState<Action.Alert>?
+これは一言で言うと：
+
+「アラート表示するかどうか（＝nil か そうでないか）を監視しつつ、関連アクションも自動的に処理できるようにするマーク」
+
+つまり：
+
+alert = AlertState(...) とセットすれば → アラートが表示される！
+
+アラート内のボタンが押されると → Action.alert(.presented(...)) というアクションが自動で送られる！
+
+📌 通常の Optional な状態（AlertState?）に、
+
+✅ 「表示フラグの自動管理」
+
+✅ 「ボタン押下アクションのバインド」
+
+を合体させたのが @Presents！
+
+🐒「PresentationAction」って何？
+📦 問題から入ろう！（その2）
+アラートに「増やす」「キャンセル」みたいなボタンをつけるとする。じゃあ、そのボタンが押されたときに「どのボタンが押されたか」ってどうやって知るの？
+
+普通の SwiftUI では closure でハンドルするけど、TCAは closure を使わない。
+
+🎮 PresentationAction の登場
+swift
+コピーする
+編集する
+enum Action {
+  case alert(PresentationAction<Alert>)
+}
+これは一言で言うと：
+
+「アラートやダイアログでユーザーがボタンを押したことを、Reducer に伝えるラッパー」
+
+つまりこうなる：
+
+アラート表示時 → state.alert = AlertState(...)
+
+ユーザーがボタン押すと → 自動で .alert(.presented(.incrementButtonTapped)) というアクションが送られる！
+
+こうすれば Reducer はこう書ける：
+
+swift
+コピーする
+編集する
+case .alert(.presented(.incrementButtonTapped)):
+  state.count += 1
+すっきり！！！
