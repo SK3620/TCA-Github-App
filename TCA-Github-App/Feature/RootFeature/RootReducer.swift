@@ -31,11 +31,16 @@ public struct RootReducer: Reducer, Sendable {
     
     public var body: some ReducerOf<Self> {
         
-        // 親State＆Actionの中で、子State＆Actionを管理する
-        // Scopeで子を親に組み（埋め）込み、親子関係を作成すると⬇︎
-        // ・親が処理の一部を子に任せられる
-        // ・親で子のActionを受け取れて処理できる
-        // ・親が子のStateを操作できる
+        /*
+         親State＆Actionの中で、子State＆Actionを管理する
+         Scopeで子を親に組み（埋め）込み、親子関係を作成すると⬇︎
+         ・親が処理の一部を子に任せられる
+         ・親で子のActionを受け取れて処理できる
+         ・親が子のStateを操作できる
+        
+         Scope, .foreach, .iflet とかはいずれも親子関係を作るものだと思う
+         （用途は違う）
+        */
         
         Scope(state: \.tabBar, action: \.tabBar) {
             TabBarReducer()
