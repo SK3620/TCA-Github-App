@@ -63,6 +63,42 @@ public struct SearchRepositoriesReducer: Reducer, Sendable {
                 }
             }
         
+        /*
+        Reducer { state, action in
+            switch action {
+            case .binding(\State.query): // KeyPathでパターンマッチングも可能（※「case .binding」よりも先に書く）.onChangeでも良い
+                print("現在の入力値は：\(state.query)")
+                return .none
+
+            case .binding:
+                return .none
+                
+            case let .view(viewAction):
+                return .none
+                
+            case let .internal(internalAction):
+                return .none
+                
+            case let .delegate(delegateAction):
+                return .none
+                
+            case let .items(.element(id: _, action: .delegate(.didBookmark(repository)))):
+                print("\(repository.name) をブックマークしました")
+                return .none
+                
+            case .items:
+                return .none
+            }
+        }
+        // 親に複数の子を埋め込む（それぞれの子に対応する Reducer を適用する）
+        // 大きな List 画面を管理する Reducer と List 内の一つ一つの Row を管理するための Reducer を分けたい時に使用する
+        .forEach(\.items, action: \.items) {
+            RepositoryItemReducer()
+        }
+        // 各子画面の処理を親とつなげる
+        .forEach(\.path, action: \.path)
+        */
+                
         Reduce { state, action in
             print(action)
             switch action {
@@ -130,3 +166,39 @@ public struct SearchRepositoriesReducer: Reducer, Sendable {
         .forEach(\.path, action: \.path)
     }
 }
+
+/*
+extension SearchRepositoriesReducer {
+    public enum Action: ReducerAction, BindableAction {
+        
+        case view(ViewAction)
+        case `internal`(InternalAction)
+        case delegate(DelegateAction)
+        
+        case binding(BindingAction<State>)
+        case items(IdentifiedActionOf<RepositoryItemReducer>)
+        
+        // View で発生する Action
+        public enum ViewAction {
+            case search // 検索押下時
+            case itemTapped(item: Repository, liked: Bool)
+            case itemAppeared(id: Int)
+            case path(StackActionOf<Path>) // 子画面からのイベントを受け取る窓口
+            
+            // Scope, ForEach, ForEachStore などの API の利用方法が煩雑になる
+            // case items(IdentifiedActionOf<RepositoryItemReducer>) ❌
+        }
+        
+        // Reducer 内部で副作用によって発生する Action
+        public enum InternalAction {
+            case searchReposResponse(Result<SearchReposResponse, Error>) // 受け取った検索結果を流す
+        }
+        
+        // Parent Reducer に処理を委譲するための Action
+        public enum DelegateAction: Equatable {
+            // SearchRepositoriesReducer から親 Reducer への処理の委譲は今回なし
+            case someDelegateAction
+        }
+    }
+}
+*/

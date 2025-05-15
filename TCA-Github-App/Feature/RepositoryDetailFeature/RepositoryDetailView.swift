@@ -30,6 +30,9 @@ public struct RepositoryDetailView: View {
                             .foregroundStyle(Color.yellow)
                     }
                 }
+                .onTapGesture {
+                    store.send(.itemTapped)
+                }
 
                 Spacer(minLength: 16)
 
@@ -42,6 +45,9 @@ public struct RepositoryDetailView: View {
                         .foregroundStyle(Color.pink)
                 }
             }
+            .background(store.changeBgColor ? Color.green.opacity(0.1) : Color.white)
         }
+        // store（Reducer） で保持されている Optional な @Presents で表示状態が管理されている alertState が non-nil の時にアラートを表示
+        .alert($store.scope(state: \.alert, action: \.alert))
     }
 }
