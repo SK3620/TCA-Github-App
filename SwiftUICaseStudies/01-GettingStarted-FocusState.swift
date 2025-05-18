@@ -46,6 +46,8 @@ struct FocusDemo {
 
 struct FocusDemoView: View {
   @Bindable var store: StoreOf<FocusDemo>
+  // SwiftUI のフォーカス状態を管理するためのプロパティラッパー。
+  // どの入力フィールドにフォーカスがあるかを表す。
   @FocusState var focusedField: FocusDemo.State.Field?
 
   var body: some View {
@@ -53,8 +55,10 @@ struct FocusDemoView: View {
       AboutView(readMe: readMe)
 
       VStack {
+        // フォーカス対象が `username` のとき、この TextField にフォーカスが当たる。
         TextField("Username", text: $store.username)
           .focused($focusedField, equals: .username)
+        // フォーカス対象が `password` のとき、この SecureField にフォーカスが当たる。
         SecureField("Password", text: $store.password)
           .focused($focusedField, equals: .password)
         Button("Sign In") {
@@ -64,7 +68,8 @@ struct FocusDemoView: View {
       }
       .textFieldStyle(.roundedBorder)
     }
-    // Synchronize store focus state and local focus state.
+    // ストアの状態 `focusedField` と、SwiftUI のローカル状態 `$focusedField` を双方向にバインド。
+    // アクションによってフォーカス状態が更新されたときにビューに反映される。
     .bind($store.focusedField, to: $focusedField)
     .navigationTitle("Focus demo")
   }
